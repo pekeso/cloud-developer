@@ -3,7 +3,7 @@ import 'source-map-support/register'
 import * as middy from 'middy'
 import { cors } from 'middy/middlewares'
 import { CreateTodoRequest } from '../../requests/CreateTodoRequest'
-import { createTodo } from '../../helpers/todos'
+import { createTodo } from '../../businessLogic/todos'
 import { createLogger } from '../../utils/logger'
 // import { getUserId } from '../utils';
 // import { createTodo } from '../../businessLogic/todos'
@@ -20,7 +20,7 @@ export const handler = middy(
     return {
       statusCode: 201,
       body: JSON.stringify({
-        newItem
+        item: newItem
       })
     }
   }

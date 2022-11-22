@@ -3,7 +3,7 @@ import 'source-map-support/register'
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import * as middy from 'middy'
 import { cors, httpErrorHandler } from 'middy/middlewares'
-import { getTodoById, updateTodoWithImage } from '../../helpers/todos'
+import { getTodoById, updateTodoWithImage } from '../../businessLogic/todos'
 import { getUploadUrl } from '../../helpers/attachmentUtils'
 import { createLogger } from '../../utils/logger'
 
